@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Enquiry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="nav">
+            <a href="#homesection"><span id="home">Home</span></a>
+            <a href="#profilesection"><span id="profile">Profile</span></a>
+            <a href="#aboutsection"><span id="about">About</span></a>
+            <a href="#contactsection"><span id="contact">Contact</span></a>
+            <a href="#"><span id="login">Login</span></a>
+            <a href="singup.html"><span id="signup">Signup</span></a>
+        </nav>
+
+    </header>
+    <main>
+
+        <div class="form">
+            <form>
+                <p class="input-label">Enter your name*:</p>
+                <input class="input-item" type="text" id="name" name="name" required/>
+                <p class="input-label">Enter your email*:</p>
+                <input class="input-item" type="email" id="email" name="email" required />
+                <p class="input-label">Enter your profession*:</p>
+                <input class="input-item" type="text" id="profession" name="profession" required />
+                <p class="input-label">Enter your Age*:</p>
+                <input class="input-item" type="number" id="age" name="age" min="18" max="50">
+                
+                <p class="input-label">Enter your requirements*:</p>
+                
+                <textarea class="input-item" cols="22" rows="10" id="requirements" name="requirements" required></textarea>
+                <p class="input-label">Enter your desired deadline from*:</p>
+                <input type="text" id="currentDate" name="currentDate"/>
+                <p class="input-label">To:</p>
+                <input type="date" id="date" name="date"/>
+                <p class="input-label">Select your gender*:</p>
+                <input type="radio" id="gender" name="gender" value="Male" required/><label>Male</label>
+                <input type="radio" id="gender" name="gender" value="Female" required/><label>Female</label><br><br>
+                <input type="button" id="submit" name="submit" value="Submit"/>
+                <input type="reset" id="reset" name="reset" value="Reset" />
+                
+
+
+            </form>
+
+
+        </div>
+
+    </main>
+    <script>
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  document.getElementById("currentDate").value = date;
+    </script>
+</body>
+
+</html>
